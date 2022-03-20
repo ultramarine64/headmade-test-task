@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@apollo/client": "^3.5.10",
     "antd": "^4.19.2",
+    "date-and-time": "^2.3.0",
     "graphql": "^16.3.0",
     "next": "12.1.0",
     "react": "17.0.2",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "eslint": "8.11.0",
     "eslint-config-next": "12.1.0",
+    "graphql-tag": "^2.12.6",
     "sass": "^1.49.9"
   }
 }

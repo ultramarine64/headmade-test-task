@@ -1,0 +1,61 @@
+.imageContainer {
+  position: relative;
+  aspect-ratio: 320 / 140;
+  user-select: none;
+}
+
+.date {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  color: #808080;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  margin-top: 18px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.subtitle {
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+}
+
+@media (min-width: 768px) {
+  .imageContainer {
+    aspect-ratio: 230 / 200;
+  }
+}
+
+@media (min-width: 1440px) {
+  .imageContainer {
+    aspect-ratio: 380 / 200;
+  }
+  .date {
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .subtitle {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
