@@ -11,19 +11,21 @@ function GeneratedNewsPage(props) {
         <Head>
           <title>Все новости</title>
         </Head>
-        <main className={styles.container}>
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            {props.newsList.map((news) => (
-              <Col xs={24} md={8} key={news.id} >
-                <NewsCard newsImage={news.picture[0].src}
-                          date={news.created_at}
-                          title={news.heading.title.ru.manual}
-                          subtitle={news.heading.subtitle.ru.manual}
-                />
-              </Col>
-            ))}
-          </Row>
-          <Button type="primary" onClick={props.fetchMore} className={styles.button}>Показать ещё</Button>
+        <main className={styles.main}>
+          <div className={styles.container}>
+            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+              {props.newsList.map((news) => (
+                <Col xs={24} md={8} key={news.id} >
+                  <NewsCard newsImage={news.picture[0].src}
+                            date={news.created_at}
+                            title={news.heading.title.ru.manual}
+                            subtitle={news.heading.subtitle.ru.manual}
+                  />
+                </Col>
+              ))}
+            </Row>
+            <Button type="primary" onClick={props.fetchMore} className={styles.button}>Показать ещё</Button>
+          </div>
         </main>
       </div>
   );
