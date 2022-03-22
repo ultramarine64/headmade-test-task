@@ -1,4 +1,4 @@
-import '../styles/globals.scss'
+import "../styles/globals.scss";
 import { ApolloProvider } from "@apollo/client";
 import { newsListClient } from "../apollo-client";
 
@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
     <ApolloProvider client={newsListClient}>
       <Component {...pageProps} />
     </ApolloProvider>
-  );
+  )
 }
 
 export default MyApp

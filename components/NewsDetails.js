@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import styles from "../styles/NewsPage.module.scss";
+import Image from "next/image";
 import { Breadcrumb } from "antd";
-import ContentFlow from './Sections/ContentFlow';
-import ImageGallery from './Sections/ImageGallery';
+import styles from "../styles/NewsDetails.module.scss";
+import ContentFlow from "./Sections/ContentFlow";
+import ImageGallery from "./Sections/ImageGallery";
 import TwitterPost from "./Sections/TwitterPost";
 import VideoContent from "./Sections/VideoContent";
 import AccordionContent from "./Sections/AccordionContent";

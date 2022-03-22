@@ -1,40 +1,40 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.scss";
-import { useQuery } from "@apollo/client";
-import newsListData from '../queries/newsListData.graphql';
 import { Button, Row, Col } from "antd";
-import NewsCard from "../components/NewsCard"
+import { useQuery } from "@apollo/client";
+import newsListQuery from "../queries/newsListQuery.graphql";
+import styles from "../styles/NewsListPage.module.scss";
+import NewsCard from "../components/NewsCard";
 
-function GeneratedNewsPage(props) {
+function GeneratedNewsListPage(props) {
   return (
-      <div>
-        <Head>
-          <title>Все новости</title>
-        </Head>
-        <main className={styles.main}>
-          <div className={styles.container}>
-            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-              {props.newsList.map((news) => (
-                <Col xs={24} md={8} key={news.id} >
-                  <NewsCard newsImage={news.picture[0].src}
-                            newsId={news.id}
-                            date={news.created_at}
-                            title={news.heading.title.ru.manual}
-                            subtitle={news.heading.subtitle.ru.manual}
-                  />
-                </Col>
-              ))}
-            </Row>
-            <Button type="primary" onClick={props.fetchMore} className={styles.button}>Показать ещё</Button>
-          </div>
-        </main>
-      </div>
+    <div>
+      <Head>
+        <title>Все новости</title>
+      </Head>
+      <main className={styles.main}>
+        <div className={styles.container}>
+          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+            {props.newsList.map((news) => (
+              <Col xs={24} md={8} key={news.id} >
+                <NewsCard newsImage={news.picture[0].src}
+                          newsId={news.id}
+                          date={news.created_at}
+                          title={news.heading.title.ru.manual}
+                          subtitle={news.heading.subtitle.ru.manual}
+                />
+              </Col>
+            ))}
+          </Row>
+          <Button type="primary" onClick={props.fetchMore} className={styles.button}>Показать ещё</Button>
+        </div>
+      </main>
+    </div>
   );
 }
 
-export default function NewsPage() {
+export default function NewsListPage() {
   const { loading, data, fetchMore } = useQuery(
-    newsListData,
+    newsListQuery,
     {
       variables: {
         offset: 0,
@@ -55,6 +55,6 @@ export default function NewsPage() {
     return null;
   }
   return (
-    <GeneratedNewsPage newsList={data.v_news} fetchMore={fetchMoreNews} />
+    <GeneratedNewsListPage newsList={data.v_news} fetchMore={fetchMoreNews} />
   )
 }

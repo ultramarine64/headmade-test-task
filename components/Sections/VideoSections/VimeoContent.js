@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 /// @todo Сделать нормальную стилизацию видео
 export default function VimeoContent(props) {
@@ -8,7 +8,7 @@ export default function VimeoContent(props) {
     fetch(`https://vimeo.com/api/oembed.json?url=${props.content}`)
       .then(response => response.json())
       .then(data => setEmbedData(data))
-  }, []);
+  }, [props.content]);
 
   return (
     embedData

@@ -1,5 +1,5 @@
-import { Collapse } from 'antd';
-import { nanoid } from 'nanoid';
+import { Collapse } from "antd";
+import { nanoid } from "nanoid";
 import styles from "../../styles/Sections.module.scss";
 
 const { Panel } = Collapse;

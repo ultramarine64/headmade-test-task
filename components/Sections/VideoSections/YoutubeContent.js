@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 /// @todo Сделать нормальную стилизацию видео
 export default function YoutubeContent(props) {
@@ -8,7 +8,7 @@ export default function YoutubeContent(props) {
     fetch(`https://www.youtube.com/oembed?url=${props.content}&format=json`)
       .then(response => response.json())
       .then(data => setEmbedData(data))
-  }, []);
+  }, [props.content]);
 
   return (
     embedData

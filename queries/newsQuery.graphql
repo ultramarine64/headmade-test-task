@@ -1,4 +1,4 @@
-query newsData($id: Int) {
+query newsQuery($id: Int) {
   v_news(where: {id: {_eq: $id}}) {
     heading
     picture

@@ -1,4 +1,4 @@
-query newsListData($offset: Int, $limit: Int) {
+query newsListQuery($offset: Int, $limit: Int) {
   v_news(offset: $offset, limit: $limit) {
     id
     heading

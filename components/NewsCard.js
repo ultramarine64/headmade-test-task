@@ -1,6 +1,6 @@
-import date from 'date-and-time';
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
+import date from "date-and-time";
 import styles from "../styles/NewsCard.module.scss";
 
 export default function NewsCard(props) {
