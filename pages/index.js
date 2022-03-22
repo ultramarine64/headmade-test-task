@@ -5,16 +5,16 @@ import newsListQuery from "../queries/newsListQuery.graphql";
 import styles from "../styles/NewsListPage.module.scss";
 import NewsCard from "../components/NewsCard";
 
-function GeneratedNewsListPage(props) {
+function GeneratedNewsListPage({ newsList, fetchMore }) {
   return (
-    <div>
+    <>
       <Head>
         <title>Все новости</title>
       </Head>
       <main className={styles.main}>
         <div className={styles.container}>
           <Row gutter={{ md: 20, xl: 30 }}>
-            {props.newsList.map((news) => (
+            {newsList.map((news) => (
               <Col xs={24} md={8} key={news.id} >
                 <NewsCard newsImage={news.picture[0].src}
                           newsId={news.id}
@@ -25,10 +25,10 @@ function GeneratedNewsListPage(props) {
               </Col>
             ))}
           </Row>
-          <Button type="primary" onClick={props.fetchMore} className={styles.button}>Показать ещё</Button>
+          <Button type="primary" onClick={fetchMore} className={styles.button}>Показать ещё</Button>
         </div>
       </main>
-    </div>
+    </>
   );
 }
 

@@ -2,7 +2,7 @@
 
 .imageContainer {
   position: relative;
-  aspect-ratio: 320 / 140;
+  aspect-ratio: 32 / 14;
   user-select: none;
 }
 
@@ -42,13 +42,13 @@
 
 @media (min-width: 768px) {
   .imageContainer {
-    aspect-ratio: 230 / 200;
+    aspect-ratio: 23 / 20;
   }
 }
 
 @media (min-width: 1440px) {
   .imageContainer {
-    aspect-ratio: 380 / 200;
+    aspect-ratio: 38 / 20;
   }
   .date {
     margin-top: 12px;

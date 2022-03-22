@@ -5,21 +5,21 @@ import idsListQuery from "../../../queries/idsListQuery.graphql";
 import styles from "../../../styles/NewsDetailedPage.module.scss";
 import NewsDetails from "../../../components/NewsDetails";
 
-export default function NewsDetailedPage(props) {
+export default function NewsDetailedPage({ newsData }) {
   return (
-      <div>
-        <Head>
-          <title>{props.newsData.heading.title.ru.manual}</title>
-        </Head>
-        <main>
-          <div className={styles.container}>
-            <NewsDetails newsImage={props.newsData.picture[0].src}
-                         title={props.newsData.heading.title.ru.manual}
-                         sections={props.newsData.sections}
-            />
-          </div>
-        </main>
-      </div>
+    <>
+      <Head>
+        <title>{newsData.heading.title.ru.manual}</title>
+      </Head>
+      <main>
+        <div className={styles.container}>
+          <NewsDetails newsImage={newsData.picture[0].src}
+                       title={newsData.heading.title.ru.manual}
+                       sections={newsData.sections}
+          />
+        </div>
+      </main>
+    </>
   )
 }
 

@@ -20,13 +20,14 @@ export default function NewsPage(props) {
         </div>
       </div>
       <h1 className={styles.title}>
-          {props.title}
+        {props.title}
       </h1>
       <div className={styles.sections}>
         {props.sections.map(section => {
           switch(section.component) {
             case "content-flow" :
-              return <ContentFlow content={section.heading.description || section.heading.title} />
+              const textContent = section.heading?.description || section.heading?.title;
+              return (textContent && <ContentFlow content={textContent} />)
             case "image-gallery" :
               return <ImageGallery content={section.images} />
             case "twitter-post" :

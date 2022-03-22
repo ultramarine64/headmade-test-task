@@ -4,7 +4,6 @@ import RutubeContent from "./VideoSections/RutubeContent";
 import VimeoContent from "./VideoSections/VimeoContent";
 
 export default function VideoContent(props) {
-
   const videoType = props.content.includes("youtube") ? "youtube" :
                     props.content.includes("vimeo")   ? "vimeo"   :
                     props.content.includes("rutube")  ? "rutube"  :
