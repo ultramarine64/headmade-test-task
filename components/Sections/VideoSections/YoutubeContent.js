@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
+import styles from "../../../styles/Sections.module.scss";
 
-/// @todo Сделать нормальную стилизацию видео
 export default function YoutubeContent(props) {
   const [embedData, setEmbedData] = useState({});
 
@@ -13,7 +13,7 @@ export default function YoutubeContent(props) {
   return (
     embedData
     ?
-    <div dangerouslySetInnerHTML={{__html: embedData?.html}}></div>
+    <div dangerouslySetInnerHTML={{__html: embedData?.html}} className={styles.videoContent}></div>
     :
     null
   )

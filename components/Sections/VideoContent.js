@@ -1,3 +1,4 @@
+import styles from "../../styles/Sections.module.scss";
 import YoutubeContent from "./VideoSections/YoutubeContent";
 import RutubeContent from "./VideoSections/RutubeContent";
 import VimeoContent from "./VideoSections/VimeoContent";
@@ -10,12 +11,12 @@ export default function VideoContent(props) {
                                                         "unknown";
 
   return (
-    <div>
-      {props.heading?.title && <p>{props.heading.title.ru.manual}</p>}
+    <div className={styles.videoContentContainer}>
+      {props.heading?.title && <h3>{props.heading.title.ru.manual}</h3>}
       {videoType === "youtube" && <YoutubeContent content={props.content} />}
       {videoType === "vimeo"   && <VimeoContent content={props.content} />}
       {videoType === "rutube"  && <RutubeContent content={props.content} />}
-      {props.heading?.description && <p>{props.heading.description.ru.manual}</p>}
+      {props.heading?.description && <span>{props.heading.description.ru.manual}</span>}
     </div>
   )
 }
