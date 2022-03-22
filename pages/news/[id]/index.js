@@ -2,7 +2,7 @@ import Head from "next/head";
 import { newsPageClient } from "../../../apollo-client";
 import newsList from '../../../queries/newsData.graphql';
 import idsQuery from "../../../queries/idsList.graphql";
-import styles from "../../../styles/NewsHome.module.css"
+import styles from "../../../styles/NewsHome.module.scss"
 import NewsPage from "../../../components/NewsPage";
 
 export default function GeneratedNewsPage(props) {

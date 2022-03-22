@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../styles/globals.scss'
 import { ApolloProvider } from "@apollo/client";
 import { newsListClient } from "../apollo-client";
 

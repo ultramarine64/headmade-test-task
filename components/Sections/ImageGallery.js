@@ -1,4 +1,4 @@
-import styles from "../../styles/Sections.module.css";
+import styles from "../../styles/Sections.module.scss";
 import { Image } from "antd";
 import { nanoid } from 'nanoid';
 import { Row, Col } from "antd";

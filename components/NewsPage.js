@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from "../styles/NewsPage.module.css";
+import styles from "../styles/NewsPage.module.scss";
 import { Breadcrumb } from "antd";
 import ContentFlow from './Sections/ContentFlow';
 import ImageGallery from './Sections/ImageGallery';

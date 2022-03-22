@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 import { useQuery } from "@apollo/client";
 import newsListData from '../queries/newsListData.graphql';
 import { Button, Row, Col } from "antd";

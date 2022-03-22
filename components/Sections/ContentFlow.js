@@ -1,4 +1,4 @@
-import styles from "../../styles/Sections.module.css";
+import styles from "../../styles/Sections.module.scss";
 import { marked } from "marked";
 
 export default function ContentFlow(props) {
