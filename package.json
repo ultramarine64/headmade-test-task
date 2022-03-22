@@ -4,23 +4,28 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build && next export && touch ./out/.nojekyll",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "gh-pages -d out -t true"
   },
   "dependencies": {
     "@apollo/client": "^3.5.10",
     "antd": "^4.19.2",
     "date-and-time": "^2.3.0",
     "graphql": "^16.3.0",
+    "nanoid": "^3.3.1",
     "next": "12.1.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-tweet-embed": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "8.11.0",
     "eslint-config-next": "12.1.0",
+    "gh-pages": "^3.2.3",
     "graphql-tag": "^2.12.6",
+    "marked": "^4.0.12",
     "sass": "^1.49.9"
   }
 }

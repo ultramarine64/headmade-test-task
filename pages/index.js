@@ -17,6 +17,7 @@ function GeneratedNewsPage(props) {
               {props.newsList.map((news) => (
                 <Col xs={24} md={8} key={news.id} >
                   <NewsCard newsImage={news.picture[0].src}
+                            newsId={news.id}
                             date={news.created_at}
                             title={news.heading.title.ru.manual}
                             subtitle={news.heading.subtitle.ru.manual}

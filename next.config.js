@@ -7,7 +7,7 @@ const nextConfig = {
   },
   images: {
     domains: ['storage.yandexcloud.net'],
-    loader: 'akamai',
+    loader: 'imgix',
     path: '',
   },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {

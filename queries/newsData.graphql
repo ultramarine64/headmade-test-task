@@ -1,0 +1,7 @@
+query newsData($id: Int) {
+  v_news(where: {id: {_eq: $id}}) {
+    heading
+    picture
+    sections
+  }
+}

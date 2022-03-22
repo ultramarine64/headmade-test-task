@@ -1,0 +1,5 @@
+query idsList {
+  v_news {
+    id
+  }
+}

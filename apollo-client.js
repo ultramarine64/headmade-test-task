@@ -1,5 +1,13 @@
 import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
 
+const link = new HttpLink({
+  uri: 'https://gql-test.fscch.ru/v1/graphql',
+  headers: {
+      "content-type": "application/json",
+      "x-hasura-admin-secret": "pass-fscch-gql-test"
+  }
+});
+
 const cache = new InMemoryCache({
     typePolicies: {
       Query: {
@@ -19,15 +27,14 @@ const cache = new InMemoryCache({
     },
   });
 
-const client = new ApolloClient({
-    link: new HttpLink({
-        uri: 'https://gql-test.fscch.ru/v1/graphql',
-        headers: {
-            "content-type": "application/json",
-            "x-hasura-admin-secret": "pass-fscch-gql-test"
-        }
-    }),
-    cache: cache,
+const newsListClient = new ApolloClient({
+  link: link,
+  cache: cache,
 })
 
-export default client
+const newsPageClient = new ApolloClient({
+  link: link,
+  cache: new InMemoryCache(),
+})
+
+export { newsListClient, newsPageClient }
