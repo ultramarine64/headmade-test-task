@@ -13,7 +13,7 @@ function GeneratedNewsListPage(props) {
       </Head>
       <main className={styles.main}>
         <div className={styles.container}>
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          <Row gutter={{ md: 20, xl: 30 }}>
             {props.newsList.map((news) => (
               <Col xs={24} md={8} key={news.id} >
                 <NewsCard newsImage={news.picture[0].src}

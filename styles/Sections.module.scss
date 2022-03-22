@@ -1,20 +1,17 @@
 .contentFlow {
-  margin-top: 30px;
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
 }
 
-.accordion {
-  margin-top: 30px;
-}
-
 .imagePreviewCol {
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  user-select: none;
 }
 
 .videoContentContainer {
+  margin: 4px 0;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -42,14 +39,11 @@
 
 @media (min-width: 768px) {
   .contentFlow {
-    margin-top: 22px;
     font-size: 14px;
     line-height: 17px;
   }
-  .accordion {
-    margin-top: 22px;
-  }
   .videoContentContainer {
+    margin: 8px 0;
     gap: 8px;
   }
 }

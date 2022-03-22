@@ -1,3 +1,5 @@
+@import "colors";
+
 .breadcrumbsWithNewsImage {
   display: flex;
   flex-direction: column;
@@ -8,7 +10,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  color: #4589BB;
+  color: $blue-color;
 }
 
 .imageContainer {
@@ -24,13 +26,15 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 29px;
-  color: #000000;
+  color: $black-color;
 }
 
 .sections {
-  margin: 0;
+  margin: 30px 0;
   padding: 0;
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 @media (min-width: 768px) {
@@ -43,12 +47,16 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;
-    color: #4589BB;
+    color: $blue-color;
   }
   .title {
     margin-top: 30px;
     font-size: 30px;
     line-height: 37px;
+  }
+  .sections {
+    margin: 22px 0;
+    gap: 14px;
   }
   .imageContainer {
     aspect-ratio: 6 / 4;

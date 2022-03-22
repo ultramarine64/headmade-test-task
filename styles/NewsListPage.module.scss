@@ -1,3 +1,5 @@
+@import "colors";
+
 .container {
   padding: 20px;
   max-width: 1600px;
@@ -19,10 +21,10 @@
   font-size: 14px;
   text-align: center;
   color: #FFFFFF;
-  background: #D49967;
+  background: $gold-color;
 
   &:hover {
-    background: #4589BB;
+    background: $blue-color;
   }
 }
 
